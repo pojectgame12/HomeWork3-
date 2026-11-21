@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Level 1 schematic for Shadow Switch">
+<rect width="960" height="320" fill="#f4f8fc"/>
+<rect x="18" y="16" width="924" height="290" fill="#eaf1fa" stroke="#bdcadd" rx="10"/>
+<rect x="25" y="196" width="910" height="82" fill="#dbe7f3"/>
+<rect x="410" y="222" width="245" height="57" fill="#18212e"/>
+<text x="532" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="40" y="222" width="370" height="29" fill="#415b77"/>
+<rect x="40" y="222" width="370" height="5" fill="#829db9"/>
+<rect x="655" y="222" width="265" height="29" fill="#415b77"/>
+<rect x="655" y="222" width="265" height="5" fill="#829db9"/>
+<rect x="410" y="218" width="245" height="9" rx="2" fill="#a56ce2" stroke="#6a39b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="532" y="202" fill="#633d94" text-anchor="middle" font-size="14" font-weight="700" font-family="Arial">B1 · SHADOW</text>
+<line x1="230" y1="209" x2="315" y2="170" stroke="#ffdb83" stroke-width="8" stroke-opacity=".4"/>
+<line x1="230" y1="209" x2="315" y2="170" stroke="#dfa635" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="230" cy="207" r="13" fill="#ffc95e" stroke="#9a741e" stroke-width="2"/>
+<text x="230" y="185" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#8c661a">L1</text>
+<rect x="311" y="190" width="28" height="32" rx="5" fill="#7d879d"/>
+<text x="325" y="184" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#4a556c">O1</text>
+<circle cx="85" cy="195" r="10" fill="#1575b9"/><rect x="76" y="205" width="18" height="17" rx="4" fill="#1575b9"/>
+<text x="85" y="178" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#145b93">START</text>
+<rect x="858" y="156" width="34" height="66" rx="5" fill="#d9fcf1" stroke="#168a74" stroke-width="4"/>
+<text x="875" y="145" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0a785d">EXIT</text>
+<line x1="85" y1="45" x2="875" y2="45" stroke="#246ab5" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="875,45 864,40 864,50" fill="#246ab5"/>
+<text x="480" y="37" text-anchor="middle" font-family="Arial" font-size="11" fill="#246ab5" font-weight="700">PLAYER PATH (SCHEMATIC)</text>
+<text x="480" y="300" font-size="12" text-anchor="middle" font-family="Arial" fill="#64748b">Conceptual side-view · not to scale · paths indicate intended roles, not exact movement frames</text>
+</svg>

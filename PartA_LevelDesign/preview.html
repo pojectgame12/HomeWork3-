@@ -1,0 +1,368 @@
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>מטלה 3: תכנון רמות</title><style>body{direction:rtl;font-family:Arial, sans-serif;margin:0;background:#f3f6fb;color:#183047;line-height:1.7}header{background:#112d4e;color:#fff;padding:32px max(22px,calc((100vw - 1080px)/2));}main{max-width:1080px;margin:24px auto;padding:0 20px}section{background:white;border:1px solid #dce5f1;border-radius:14px;padding:24px;margin-bottom:22px;box-shadow:0 4px 14px #0d2d5511}h1,h2,h3{line-height:1.25}h2{color:#143d60;margin-top:0}h3{color:#16496e}p{margin:8px 0 14px}ul,ol{padding-right:26px}figure{margin:22px 0 4px}figure svg{display:block;max-width:100%;height:auto;border-radius:8px}figcaption{font-size:13px;color:#526879;margin-top:4px}table{width:100%;border-collapse:collapse}th,td{border:1px solid #d1dbe5;padding:10px;text-align:right}th{background:#e9f1f9}.level{page-break-inside:avoid}.kicker{color:#6cb2eb;font-size:14px;font-weight:bold}.sub{color:#d5e7f7}.lead{font-size:19px}.badge{display:inline-block;border:1px solid #d3e4f0;border-radius:20px;padding:2px 10px;color:#225475;font-size:13px}.note{border-right:4px solid #3885ab;padding:12px;background:#eef8fd}.small{font-size:13px;color:#536d80}a{color:#0b6599}@media print{body{background:white}header{background:white;color:#111;padding:20px}header .sub{color:#555}section{box-shadow:none}main{padding:0;margin:auto}.level{break-inside:avoid}}</style></head><body>
+<header><div class="kicker">UNITY · HOMEWORK 3</div><h1>חלק א׳ – תכנון רמות</h1><div class="sub">Echo Shift + Shadow Switch · אחמד בשיר</div></header>
+<main><section><h2>סקירה כללית</h2><p class="lead">לכל משחק תוכננו ארבע רמות: הדרכה, קלה, בינונית וקשה. כל רמה כוללת אתגר, פתרון אפשרי, תנאי הצלחה וכישלון ותרשים ייעודי.</p>
+<table><thead><tr><th>משחק</th><th>הדרכה</th><th>קלה</th><th>בינונית</th><th>קשה</th></tr></thead><tbody><tr><td>Echo Shift</td><td>הד ומתג</td><td>הד, שער ובור</td><td>שני הדים ולייזר</td><td>שלושה הדים וקופסה</td></tr><tr><td>Shadow Switch</td><td>פנס וגשר</td><td>אנרגיה וגביש</td><td>שני פנסים</td><td>שני פנסים ושער</td></tr></tbody></table>
+<p class="note">תרשימי מבט־צד סכמטיים ולא בקנה מידה. סמלי L/O/B/C/S/G מציינים פנס/עצם/גשר/גביש/מתג/שער; PIT הוא בור ו־EXIT היא היציאה.</p></section>
+<section><h2>Echo Shift – תכנון ארבע רמות</h2><p>מכניקה מרכזית: הדים מוקלטים המפעילים מנגנונים בשחזור מחזורי של כ־10 שניות.</p></section>
+<section class="level"><h3>רמה 1: הד ראשון <span class="badge">הדרכה (Tutorial)</span></h3>
+<p><strong>זמן משחק משוער:</strong> 2–3 דקות · <strong>מספר הדים:</strong> 1</p>
+<p><strong>מטרה:</strong> ללמוד תנועה, קפיצה, הקלטת פעולות ומעבר דרך דלת שנפתחת באמצעות הד.</p><p><strong>מבנה המפה:</strong> חדר מעבדה ישר ללא בורות או לייזרים. אזור התחלה משמאל, משטח לחיצה ירוק באמצע החדר, שער סגור לקראת הסוף ודלת יציאה מימין. שעון ההקלטה מוצג בבירור.</p><p><strong>רכיבים:</strong> דמות שחקן; משטח לחיצה אחד (S1); שער אחד (G1); אזור יציאה; תצוגת ציר זמן של 10 שניות; כפתור איפוס.</p><p><strong>פתרון אפשרי:</strong></p><ol>
+<li>הודעת הדרכה מציגה תנועה ב־A/D, קפיצה ב־Space והפעלה/אינטראקציה ב־E.</li>
+<li>במחזור הראשון השחקן מתקדם למשטח S1 ונשאר עליו עד לסיום הקלטה של 10 שניות.</li>
+<li>בתחילת המחזור הבא ההד חוזר על המסלול ודורך על S1; השער G1 נפתח כל עוד המשטח לחוץ.</li>
+<li>השחקן מתכנן מסלול חדש, נמנע מההד, עובר דרך G1 ומגיע ליציאה.</li>
+</ol>
+<p><strong>מכשולים:</strong> להבין שההד חוזר על הפעולות הקודמות ולא פועל עצמאית; להישאר על המשטח מספיק זמן כדי לאפשר מעבר.</p>
+<p><strong>העלאת קושי:</strong> הדרכה ללא לחץ זמן מלבד מחזור ההקלטה; חידה עם מתג יחיד ונתיב ברור. הרמזים חזותיים ומפורשים.</p>
+<p><strong>ניצחון/כישלון:</strong> ניצחון: הגעה ליציאה כאשר השער פתוח. כישלון/ניסיון חוזר: התנגשות בהד מחוץ לאזור ההתחלה או מסלול הקלטה שאינו מפעיל את המתג; ניתן לאפס ב־R.</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Level 1 schematic for Echo Shift">
+<rect width="960" height="320" fill="#f4f8fc"/>
+<rect x="18" y="16" width="924" height="290" fill="#eaf1fa" stroke="#bdcadd" rx="10"/>
+<rect x="25" y="196" width="910" height="82" fill="#dbe7f3"/>
+<rect x="40" y="222" width="880" height="29" fill="#415b77"/>
+<rect x="40" y="222" width="880" height="5" fill="#829db9"/>
+<rect x="350" y="216" width="40" height="6" rx="2" fill="#40c08a"/>
+<text x="370" y="202" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0c8460">S1</text>
+<rect x="748" y="141" width="14" height="81" rx="3" fill="#e28b54" stroke="#985532" stroke-width="2"/>
+<text x="755" y="130" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#9b502d">G1</text>
+<circle cx="90" cy="195" r="10" fill="#1575b9"/><rect x="81" y="205" width="18" height="17" rx="4" fill="#1575b9"/>
+<text x="90" y="178" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#145b93">START</text>
+<rect x="848" y="156" width="34" height="66" rx="5" fill="#d9fcf1" stroke="#168a74" stroke-width="4"/>
+<text x="865" y="145" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0a785d">EXIT</text>
+<line x1="95" y1="67" x2="370" y2="67" stroke="#17a4ce" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="370,67 359,62 359,72" fill="#17a4ce"/>
+<text x="232" y="59" text-anchor="middle" font-family="Arial" font-size="11" fill="#17a4ce" font-weight="700">ECHO 1 PATH (SCHEMATIC)</text>
+<line x1="95" y1="45" x2="865" y2="45" stroke="#246ab5" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="865,45 854,40 854,50" fill="#246ab5"/>
+<text x="480" y="37" text-anchor="middle" font-family="Arial" font-size="11" fill="#246ab5" font-weight="700">PLAYER PATH (SCHEMATIC)</text>
+<text x="480" y="300" font-size="12" text-anchor="middle" font-family="Arial" fill="#64748b">Conceptual side-view · not to scale · paths indicate intended roles, not exact movement frames</text>
+</svg><figcaption>תרשים סכמטי – רמה 1 במשחק Echo Shift (לא בקנה מידה)</figcaption></figure></section>
+<section class="level"><h3>רמה 2: שומר הדלת <span class="badge">קלה</span></h3>
+<p><strong>זמן משחק משוער:</strong> 3–4 דקות · <strong>מספר הדים:</strong> 1</p>
+<p><strong>מטרה:</strong> להשתמש בהד כדי לשמור שער פתוח בזמן שהשחקן חוצה בור קטן וקופץ אל היציאה.</p><p><strong>מבנה המפה:</strong> התחלה משמאל; S1 סמוך להתחלה; בור קטן באמצע שניתן לקפוץ מעליו; G1 מעבר לבור; דלת יציאה בהמשך. השער נראה כאשר נמצאים ליד S1.</p><p><strong>רכיבים:</strong> משטח לחיצה S1, שער G1, בור אחד ברוחב שניתן לעבור בקפיצה, דלת יציאה, הד אחד ומונה הקלטה.</p><p><strong>פתרון אפשרי:</strong></p><ol>
+<li>במחזור הראשון עומדים על S1 עד שההקלטה מסתיימת.</li>
+<li>במחזור השני משאירים להד ללחוץ על S1, מתזמנים את התנועה כך שלא נפגשים בו, וקופצים מעל הבור.</li>
+<li>מגיעים אל G1 בזמן שההד ממשיך ללחוץ על המתג, חוצים את השער ויוצאים.</li>
+</ol>
+<p><strong>מכשולים:</strong> תזמון בסיסי בין ההד לשחקן ושילוב הקפיצה עם חלון הזמן שבו השער פתוח.</p>
+<p><strong>העלאת קושי:</strong> פחות טקסט עזרה, נוסף בור פיזי, וצריך לשלב שתי פעולות שנלמדו: שימור מתג וניווט.</p>
+<p><strong>ניצחון/כישלון:</strong> ניצחון: הגעה ליציאה דרך שער פתוח. כישלון: נפילה לבור, מגע אסור בהד או נעילת שער עקב עזיבת S1 מוקדם מדי.</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Level 2 schematic for Echo Shift">
+<rect width="960" height="320" fill="#f4f8fc"/>
+<rect x="18" y="16" width="924" height="290" fill="#eaf1fa" stroke="#bdcadd" rx="10"/>
+<rect x="25" y="196" width="910" height="82" fill="#dbe7f3"/>
+<rect x="430" y="222" width="100" height="57" fill="#18212e"/>
+<text x="480" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="40" y="222" width="390" height="29" fill="#415b77"/>
+<rect x="40" y="222" width="390" height="5" fill="#829db9"/>
+<rect x="530" y="222" width="390" height="29" fill="#415b77"/>
+<rect x="530" y="222" width="390" height="5" fill="#829db9"/>
+<rect x="215" y="216" width="40" height="6" rx="2" fill="#40c08a"/>
+<text x="235" y="202" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0c8460">S1</text>
+<rect x="768" y="141" width="14" height="81" rx="3" fill="#e28b54" stroke="#985532" stroke-width="2"/>
+<text x="775" y="130" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#9b502d">G1</text>
+<circle cx="90" cy="195" r="10" fill="#1575b9"/><rect x="81" y="205" width="18" height="17" rx="4" fill="#1575b9"/>
+<text x="90" y="178" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#145b93">START</text>
+<rect x="848" y="156" width="34" height="66" rx="5" fill="#d9fcf1" stroke="#168a74" stroke-width="4"/>
+<text x="865" y="145" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0a785d">EXIT</text>
+<line x1="90" y1="67" x2="235" y2="67" stroke="#17a4ce" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="235,67 224,62 224,72" fill="#17a4ce"/>
+<text x="162" y="59" text-anchor="middle" font-family="Arial" font-size="11" fill="#17a4ce" font-weight="700">ECHO 1 PATH (SCHEMATIC)</text>
+<line x1="90" y1="45" x2="865" y2="45" stroke="#246ab5" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="865,45 854,40 854,50" fill="#246ab5"/>
+<text x="477" y="37" text-anchor="middle" font-family="Arial" font-size="11" fill="#246ab5" font-weight="700">PLAYER PATH (SCHEMATIC)</text>
+<text x="480" y="300" font-size="12" text-anchor="middle" font-family="Arial" fill="#64748b">Conceptual side-view · not to scale · paths indicate intended roles, not exact movement frames</text>
+</svg><figcaption>תרשים סכמטי – רמה 2 במשחק Echo Shift (לא בקנה מידה)</figcaption></figure></section>
+<section class="level"><h3>רמה 3: שני תפקידים <span class="badge">בינונית</span></h3>
+<p><strong>זמן משחק משוער:</strong> 4–6 דקות · <strong>מספר הדים:</strong> 2</p>
+<p><strong>מטרה:</strong> לתכנן שני מחזורי הקלטה נפרדים: הד אחד פותח שער, והד שני מנטרל לייזר כדי שהשחקן יעבור.</p><p><strong>מבנה המפה:</strong> חדר ארוך המחולק לשלושה אזורים. משטח S1 משמאל פותח שער G1; מעבר צר מוביל למשטח S2 במרכז; S2 משבית לייזר פעיל ליד הבור השני. היציאה נמצאת מעבר לאזור הלייזר.</p><p><strong>רכיבים:</strong> שני משטחי לחיצה S1/S2, שער G1, לייזר אדום, שני בורות קטנים/מעברים, דלת יציאה ועד שני הדים.</p><p><strong>פתרון אפשרי:</strong></p><ol>
+<li>מחזור 1: מקליטים תנועה והישארות על S1 כדי לשמור על G1 פתוח.</li>
+<li>מחזור 2: בזמן שהד הראשון פותח את G1, עוברים אל S2 ומקליטים שהייה על המתג כדי להשבית את הלייזר.</li>
+<li>מחזור 3: שני ההדים מבצעים את תפקידיהם; השחקן חוצה את G1, קופץ מעל הבורות ועובר את אזור הלייזר אל היציאה.</li>
+</ol>
+<p><strong>מכשולים:</strong> לזכור מה כל הד יעשה בכל שנייה; למנוע הצטלבות מסוכנת בין מסלולי ההדים לבין המסלול הנוכחי.</p>
+<p><strong>העלאת קושי:</strong> החידה כבר אינה נפתרת על ידי הד אחד; יש שני תנאים מתמשכים ושני סוגי מכשולים. אין פתרון באמצעות ריצה ישירה.</p>
+<p><strong>ניצחון/כישלון:</strong> ניצחון: מעבר בשער ובאזור הלייזר כאשר שני המתגים פעילים. כישלון: נפילה, מגע בלייזר, התנגשות בהד או סגירת אחד המנגנונים.</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Level 3 schematic for Echo Shift">
+<rect width="960" height="320" fill="#f4f8fc"/>
+<rect x="18" y="16" width="924" height="290" fill="#eaf1fa" stroke="#bdcadd" rx="10"/>
+<rect x="25" y="196" width="910" height="82" fill="#dbe7f3"/>
+<rect x="370" y="222" width="75" height="57" fill="#18212e"/>
+<text x="407" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="700" y="222" width="60" height="57" fill="#18212e"/>
+<text x="730" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="40" y="222" width="330" height="29" fill="#415b77"/>
+<rect x="40" y="222" width="330" height="5" fill="#829db9"/>
+<rect x="445" y="222" width="255" height="29" fill="#415b77"/>
+<rect x="445" y="222" width="255" height="5" fill="#829db9"/>
+<rect x="760" y="222" width="160" height="29" fill="#415b77"/>
+<rect x="760" y="222" width="160" height="5" fill="#829db9"/>
+<rect x="170" y="216" width="40" height="6" rx="2" fill="#40c08a"/>
+<text x="190" y="202" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0c8460">S1</text>
+<rect x="515" y="216" width="40" height="6" rx="2" fill="#40c08a"/>
+<text x="535" y="202" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0c8460">S2</text>
+<rect x="348" y="141" width="14" height="81" rx="3" fill="#e28b54" stroke="#985532" stroke-width="2"/>
+<text x="355" y="130" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#9b502d">G1</text>
+<rect x="729" y="145" width="4" height="77" fill="#fa5465"/>
+<circle cx="731" cy="146" r="7" fill="#fa5465"/>
+<text x="731" y="132" font-size="12" text-anchor="middle" font-weight="700" font-family="Arial" fill="#b3273b">LASER</text>
+<circle cx="85" cy="195" r="10" fill="#1575b9"/><rect x="76" y="205" width="18" height="17" rx="4" fill="#1575b9"/>
+<text x="85" y="178" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#145b93">START</text>
+<rect x="853" y="156" width="34" height="66" rx="5" fill="#d9fcf1" stroke="#168a74" stroke-width="4"/>
+<text x="870" y="145" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0a785d">EXIT</text>
+<line x1="85" y1="67" x2="190" y2="67" stroke="#17a4ce" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="190,67 179,62 179,72" fill="#17a4ce"/>
+<text x="137" y="59" text-anchor="middle" font-family="Arial" font-size="11" fill="#17a4ce" font-weight="700">ECHO 1 PATH (SCHEMATIC)</text>
+<line x1="85" y1="88" x2="535" y2="88" stroke="#37bd95" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="535,88 524,83 524,93" fill="#37bd95"/>
+<text x="310" y="80" text-anchor="middle" font-family="Arial" font-size="11" fill="#37bd95" font-weight="700">ECHO 2 PATH (SCHEMATIC)</text>
+<line x1="85" y1="45" x2="870" y2="45" stroke="#246ab5" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="870,45 859,40 859,50" fill="#246ab5"/>
+<text x="477" y="37" text-anchor="middle" font-family="Arial" font-size="11" fill="#246ab5" font-weight="700">PLAYER PATH (SCHEMATIC)</text>
+<text x="480" y="300" font-size="12" text-anchor="middle" font-family="Arial" fill="#64748b">Conceptual side-view · not to scale · paths indicate intended roles, not exact movement frames</text>
+</svg><figcaption>תרשים סכמטי – רמה 3 במשחק Echo Shift (לא בקנה מידה)</figcaption></figure></section>
+<section class="level"><h3>רמה 4: סנכרון מלא <span class="badge">קשה</span></h3>
+<p><strong>זמן משחק משוער:</strong> 6–9 דקות · <strong>מספר הדים:</strong> 3</p>
+<p><strong>מטרה:</strong> לתאם שלושה הדים עם מתגים, קופסה ולייזר, ולבצע מעבר אחרון ללא התנגשות בגרסאות העבר.</p><p><strong>מבנה המפה:</strong> מעבדה הכוללת מעבר ראשון נעול (G1), ארגז שנדרש להזיז כדי להגיע למתג S2, בור מרכזי, אזור לייזר ושער יציאה סופי (G2). שלושה אזורי עבודה נפרדים מורידים התנגשות בלתי הוגנת.</p><p><strong>רכיבים:</strong> עד שלושה הדים; משטחי S1/S2/S3; שערים G1/G2; ארגז שניתן להזיז ב־E; לייזר אדום; שני בורות; יציאה.</p><p><strong>פתרון אפשרי:</strong></p><ol>
+<li>מחזור 1: ההד הראשון נשאר על S1 ופותח את G1.</li>
+<li>מחזור 2: עוברים דרך G1, דוחפים ארגז אל נקודת גישה בטוחה ומתמקמים על S2; פעולה זו מאפשרת ביטול לייזר.</li>
+<li>מחזור 3: בעזרת שני ההדים הראשונים מגיעים ל־S3 ומקליטים עמידה עליו, הפותחת את G2.</li>
+<li>מחזור 4: שלושת ההדים פועלים במקביל; השחקן בוחר תזמון שאינו מצטלב עם המסלולים, עובר את הלייזר הכבוי ואת G2 ומגיע ליציאה.</li>
+</ol>
+<p><strong>מכשולים:</strong> שלושה מסלולים מוקלטים בו־זמנית, תזמון הדוק, תכנון סדר הפעולות ותמרון קופסה. פתרון בטעות עלול ליצור מצב לא פתיר שמחייב R.</p>
+<p><strong>העלאת קושי:</strong> מגיעים למגבלת שלושת ההדים שהוגדרה ברעיון המשחק; משלבים את כל המכניקות בלי להוסיף חוק שרירותי חדש.</p>
+<p><strong>ניצחון/כישלון:</strong> ניצחון: שלושת התנאים מתקיימים בו־זמנית והדמות מגיעה ליציאה. כישלון: לייזר פעיל, נפילה, התנגשות בהד או שער שנסגר.</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Level 4 schematic for Echo Shift">
+<rect width="960" height="320" fill="#f4f8fc"/>
+<rect x="18" y="16" width="924" height="290" fill="#eaf1fa" stroke="#bdcadd" rx="10"/>
+<rect x="25" y="196" width="910" height="82" fill="#dbe7f3"/>
+<rect x="370" y="222" width="70" height="57" fill="#18212e"/>
+<text x="405" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="675" y="222" width="70" height="57" fill="#18212e"/>
+<text x="710" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="40" y="222" width="330" height="29" fill="#415b77"/>
+<rect x="40" y="222" width="330" height="5" fill="#829db9"/>
+<rect x="440" y="222" width="235" height="29" fill="#415b77"/>
+<rect x="440" y="222" width="235" height="5" fill="#829db9"/>
+<rect x="745" y="222" width="175" height="29" fill="#415b77"/>
+<rect x="745" y="222" width="175" height="5" fill="#829db9"/>
+<rect x="165" y="216" width="40" height="6" rx="2" fill="#40c08a"/>
+<text x="185" y="202" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0c8460">S1</text>
+<rect x="505" y="216" width="40" height="6" rx="2" fill="#40c08a"/>
+<text x="525" y="202" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0c8460">S2</text>
+<rect x="625" y="216" width="40" height="6" rx="2" fill="#40c08a"/>
+<text x="645" y="202" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0c8460">S3</text>
+<rect x="338" y="141" width="14" height="81" rx="3" fill="#e28b54" stroke="#985532" stroke-width="2"/>
+<text x="345" y="130" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#9b502d">G1</text>
+<rect x="833" y="141" width="14" height="81" rx="3" fill="#e28b54" stroke="#985532" stroke-width="2"/>
+<text x="840" y="130" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#9b502d">G2</text>
+<rect x="713" y="145" width="4" height="77" fill="#fa5465"/>
+<circle cx="715" cy="146" r="7" fill="#fa5465"/>
+<text x="715" y="132" font-size="12" text-anchor="middle" font-weight="700" font-family="Arial" fill="#b3273b">LASER</text>
+<rect x="454" y="189" width="32" height="33" fill="#aa8155" stroke="#705032" stroke-width="2"/>
+<text x="470" y="181" font-size="12" text-anchor="middle" font-weight="700" font-family="Arial" fill="#634833">BOX</text>
+<circle cx="85" cy="195" r="10" fill="#1575b9"/><rect x="76" y="205" width="18" height="17" rx="4" fill="#1575b9"/>
+<text x="85" y="178" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#145b93">START</text>
+<rect x="878" y="156" width="34" height="66" rx="5" fill="#d9fcf1" stroke="#168a74" stroke-width="4"/>
+<text x="895" y="145" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0a785d">EXIT</text>
+<line x1="85" y1="67" x2="185" y2="67" stroke="#17a4ce" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="185,67 174,62 174,72" fill="#17a4ce"/>
+<text x="135" y="59" text-anchor="middle" font-family="Arial" font-size="11" fill="#17a4ce" font-weight="700">ECHO 1 PATH (SCHEMATIC)</text>
+<line x1="85" y1="88" x2="525" y2="88" stroke="#37bd95" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="525,88 514,83 514,93" fill="#37bd95"/>
+<text x="305" y="80" text-anchor="middle" font-family="Arial" font-size="11" fill="#37bd95" font-weight="700">ECHO 2 PATH (SCHEMATIC)</text>
+<line x1="85" y1="108" x2="645" y2="108" stroke="#609e63" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="645,108 634,103 634,113" fill="#609e63"/>
+<text x="365" y="100" text-anchor="middle" font-family="Arial" font-size="11" fill="#609e63" font-weight="700">ECHO 3 PATH (SCHEMATIC)</text>
+<line x1="85" y1="45" x2="895" y2="45" stroke="#246ab5" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="895,45 884,40 884,50" fill="#246ab5"/>
+<text x="490" y="37" text-anchor="middle" font-family="Arial" font-size="11" fill="#246ab5" font-weight="700">PLAYER PATH (SCHEMATIC)</text>
+<text x="480" y="300" font-size="12" text-anchor="middle" font-family="Arial" fill="#64748b">Conceptual side-view · not to scale · paths indicate intended roles, not exact movement frames</text>
+</svg><figcaption>תרשים סכמטי – רמה 4 במשחק Echo Shift (לא בקנה מידה)</figcaption></figure></section>
+<section><h2>Shadow Switch – תכנון ארבע רמות</h2><p>מכניקה מרכזית: הכוונת פנסים היוצרת גשרי צל זמניים, עם מגבלת אנרגיה מתווספת בהדרגה.</p></section>
+<section class="level"><h3>רמה 1: הגשר הראשון <span class="badge">הדרכה (Tutorial)</span></h3>
+<p><strong>זמן משחק משוער:</strong> 2–3 דקות</p>
+<p><strong>מטרה:</strong> ללמוד כיצד הפעלת פנס, כיוונו אל עצם מסומן ויצירת צל הופכים בור בלתי עביר לגשר.</p><p><strong>מבנה המפה:</strong> חדר קטן; התחלה משמאל; פנס L1 מול עצם O1; בור רחב מכדי לקפוץ מעליו; אזור הטלה מסומן; יציאה מימין.</p><p><strong>רכיבים:</strong> פנס קבוע L1, עצם מטיל צל O1, אזור הקרנה, גשר צל B1, בור ודלת יציאה. אנרגיה אינה מוגבלת בשלב זה.</p><p><strong>פתרון אפשרי:</strong></p><ol>
+<li>השחקן מתקרב ל־L1 ומדליק אותו ב־E.</li>
+<li>גוררים את כיוון הפנס בעכבר עד שהאלומה פוגעת ב־O1 ומטילה צל על אזור B1.</li>
+<li>B1 מקבל מתאר סגול והופך למשטח מוצק; חוצים אותו אל היציאה.</li>
+</ol>
+<p><strong>מכשולים:</strong> להבין מדוע רק צל שמוטל על אזור ייעודי נעשה מוצק, ולזהות את המשוב החזותי.</p>
+<p><strong>העלאת קושי:</strong> אין מגבלת אנרגיה ואין צורך בהחלפת פנסים; ההצלחה מבודדת את המכניקה המרכזית של המשחק.</p>
+<p><strong>ניצחון/כישלון:</strong> ניצחון: הגעה ליציאה לאחר יצירת הגשר. כישלון: נפילה לבור אם הגשר לא פעיל; R מאפס.</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Level 1 schematic for Shadow Switch">
+<rect width="960" height="320" fill="#f4f8fc"/>
+<rect x="18" y="16" width="924" height="290" fill="#eaf1fa" stroke="#bdcadd" rx="10"/>
+<rect x="25" y="196" width="910" height="82" fill="#dbe7f3"/>
+<rect x="410" y="222" width="245" height="57" fill="#18212e"/>
+<text x="532" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="40" y="222" width="370" height="29" fill="#415b77"/>
+<rect x="40" y="222" width="370" height="5" fill="#829db9"/>
+<rect x="655" y="222" width="265" height="29" fill="#415b77"/>
+<rect x="655" y="222" width="265" height="5" fill="#829db9"/>
+<rect x="410" y="218" width="245" height="9" rx="2" fill="#a56ce2" stroke="#6a39b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="532" y="202" fill="#633d94" text-anchor="middle" font-size="14" font-weight="700" font-family="Arial">B1 · SHADOW</text>
+<line x1="230" y1="209" x2="315" y2="170" stroke="#ffdb83" stroke-width="8" stroke-opacity=".4"/>
+<line x1="230" y1="209" x2="315" y2="170" stroke="#dfa635" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="230" cy="207" r="13" fill="#ffc95e" stroke="#9a741e" stroke-width="2"/>
+<text x="230" y="185" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#8c661a">L1</text>
+<rect x="311" y="190" width="28" height="32" rx="5" fill="#7d879d"/>
+<text x="325" y="184" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#4a556c">O1</text>
+<circle cx="85" cy="195" r="10" fill="#1575b9"/><rect x="76" y="205" width="18" height="17" rx="4" fill="#1575b9"/>
+<text x="85" y="178" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#145b93">START</text>
+<rect x="858" y="156" width="34" height="66" rx="5" fill="#d9fcf1" stroke="#168a74" stroke-width="4"/>
+<text x="875" y="145" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0a785d">EXIT</text>
+<line x1="85" y1="45" x2="875" y2="45" stroke="#246ab5" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="875,45 864,40 864,50" fill="#246ab5"/>
+<text x="480" y="37" text-anchor="middle" font-family="Arial" font-size="11" fill="#246ab5" font-weight="700">PLAYER PATH (SCHEMATIC)</text>
+<text x="480" y="300" font-size="12" text-anchor="middle" font-family="Arial" fill="#64748b">Conceptual side-view · not to scale · paths indicate intended roles, not exact movement frames</text>
+</svg><figcaption>תרשים סכמטי – רמה 1 במשחק Shadow Switch (לא בקנה מידה)</figcaption></figure></section>
+<section class="level"><h3>רמה 2: האור שאוזל <span class="badge">קלה</span></h3>
+<p><strong>זמן משחק משוער:</strong> 3–4 דקות</p>
+<p><strong>מטרה:</strong> ללמוד לחסוך באנרגיית פנס, לאסוף גביש ולהפעיל גשר רק כאשר מוכנים לחצות.</p><p><strong>מבנה המפה:</strong> חדר עם פנס L1, עצם O1, גביש אנרגיה C1 לפני הבור, גשר B1 קצר ודלת יציאה בצד השני. מד האנרגיה מוצג לכל אורך השלב.</p><p><strong>רכיבים:</strong> פנס אחד עם אנרגיה התחלתית מוגבלת (ערך מוצע: 60%), גביש C1 חד־פעמי, עצם O1, בור B1, יציאה.</p><p><strong>פתרון אפשרי:</strong></p><ol>
+<li>מתקדמים אל C1 ואוספים אותו במגע כדי לקבל תוספת אנרגיה.</li>
+<li>מכוונים את הפנס כאשר הוא כבוי כדי לא לבזבז אנרגיה, ואז מדליקים אותו ב־E.</li>
+<li>ממתינים להופעת המתאר הסגול של B1, חוצים במהירות ומגיעים ליציאה.</li>
+</ol>
+<p><strong>מכשולים:</strong> תכנון סדר פעולה: איסוף אנרגיה, כיוון התאורה ורק אז הפעלתה. היעלמות הגשר במקרה של התרוקנות מחייבת תזמון.</p>
+<p><strong>העלאת קושי:</strong> אותה מכניקת גשר כמו בהדרכה, אך כעת מתווספים משאב מתכלה וגביש מוגבל בלי ריבוי פנסים.</p>
+<p><strong>ניצחון/כישלון:</strong> ניצחון: חציית הבור לפני שהאנרגיה נגמרת. כישלון: נפילה או התרוקנות האנרגיה ללא דרך להשלים; R מאפס.</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Level 2 schematic for Shadow Switch">
+<rect width="960" height="320" fill="#f4f8fc"/>
+<rect x="18" y="16" width="924" height="290" fill="#eaf1fa" stroke="#bdcadd" rx="10"/>
+<rect x="25" y="196" width="910" height="82" fill="#dbe7f3"/>
+<rect x="410" y="222" width="230" height="57" fill="#18212e"/>
+<text x="525" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="40" y="222" width="370" height="29" fill="#415b77"/>
+<rect x="40" y="222" width="370" height="5" fill="#829db9"/>
+<rect x="640" y="222" width="280" height="29" fill="#415b77"/>
+<rect x="640" y="222" width="280" height="5" fill="#829db9"/>
+<rect x="410" y="218" width="230" height="9" rx="2" fill="#a56ce2" stroke="#6a39b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="525" y="202" fill="#633d94" text-anchor="middle" font-size="14" font-weight="700" font-family="Arial">B1 · SHADOW</text>
+<line x1="185" y1="209" x2="270" y2="170" stroke="#ffdb83" stroke-width="8" stroke-opacity=".4"/>
+<line x1="185" y1="209" x2="270" y2="170" stroke="#dfa635" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="185" cy="207" r="13" fill="#ffc95e" stroke="#9a741e" stroke-width="2"/>
+<text x="185" y="185" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#8c661a">L1</text>
+<rect x="266" y="190" width="28" height="32" rx="5" fill="#7d879d"/>
+<text x="280" y="184" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#4a556c">O1</text>
+<path d="M 330 170 l 12 16 -12 19 -12 -19 Z" fill="#1eb6b4" stroke="#137e7d" stroke-width="2"/>
+<text x="330" y="160" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#137e7d">C1</text>
+<circle cx="85" cy="195" r="10" fill="#1575b9"/><rect x="76" y="205" width="18" height="17" rx="4" fill="#1575b9"/>
+<text x="85" y="178" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#145b93">START</text>
+<rect x="853" y="156" width="34" height="66" rx="5" fill="#d9fcf1" stroke="#168a74" stroke-width="4"/>
+<text x="870" y="145" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0a785d">EXIT</text>
+<line x1="85" y1="45" x2="870" y2="45" stroke="#246ab5" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="870,45 859,40 859,50" fill="#246ab5"/>
+<text x="477" y="37" text-anchor="middle" font-family="Arial" font-size="11" fill="#246ab5" font-weight="700">PLAYER PATH (SCHEMATIC)</text>
+<text x="480" y="300" font-size="12" text-anchor="middle" font-family="Arial" fill="#64748b">Conceptual side-view · not to scale · paths indicate intended roles, not exact movement frames</text>
+</svg><figcaption>תרשים סכמטי – רמה 2 במשחק Shadow Switch (לא בקנה מידה)</figcaption></figure></section>
+<section class="level"><h3>רמה 3: שתי זוויות <span class="badge">בינונית</span></h3>
+<p><strong>זמן משחק משוער:</strong> 4–6 דקות</p>
+<p><strong>מטרה:</strong> לחצות שני בורות בעזרת שני פנסים בעלי זוויות שונות, תוך שימוש באי בטוח ובגביש אנרגיה בין המעברים.</p><p><strong>מבנה המפה:</strong> חדר ארוך, בור ראשון משמאל ובור שני מימין. בין הבורות אי בטוח עם גביש C1. L1 יוצר את B1 ואילו L2, הממוקם באי הבטוח, מאפשר ליצור את B2 בזווית שונה.</p><p><strong>רכיבים:</strong> שני פנסים L1/L2, שני עצמים O1/O2, שני אזורי גשר B1/B2, גביש אחד, מד אנרגיה ושני בורות.</p><p><strong>פתרון אפשרי:</strong></p><ol>
+<li>מכוונים את L1 לעבר O1, מפעילים ויוצרים את B1 כדי להגיע לאי הבטוח.</li>
+<li>על האי אוספים את C1, מכבים את L1 כדי לחסוך באנרגיה ומכוונים את L2 לעבר O2.</li>
+<li>מפעילים את L2 ליצירת B2, חוצים את הבור השני ומגיעים ליציאה.</li>
+</ol>
+<p><strong>מכשולים:</strong> לנהל אנרגיה בין שתי הפעלות, להבחין שהגשר הראשון נעלם כאשר משנים זווית, ולהתמקם על קרקע בטוחה לפני שינוי.</p>
+<p><strong>העלאת קושי:</strong> לראשונה נדרשת החלפה בין שני מקורות אור בזוויות שונות וחשיבה על סדר ההפעלות; כל מעבר מותנה בגשר מתאים.</p>
+<p><strong>ניצחון/כישלון:</strong> ניצחון: שתי חציות תקינות ויציאה. כישלון: שינוי תאורה בזמן עמידה על גשר, נפילה או מחסור באנרגיה.</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Level 3 schematic for Shadow Switch">
+<rect width="960" height="320" fill="#f4f8fc"/>
+<rect x="18" y="16" width="924" height="290" fill="#eaf1fa" stroke="#bdcadd" rx="10"/>
+<rect x="25" y="196" width="910" height="82" fill="#dbe7f3"/>
+<rect x="320" y="222" width="120" height="57" fill="#18212e"/>
+<text x="380" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="680" y="222" width="120" height="57" fill="#18212e"/>
+<text x="740" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="40" y="222" width="280" height="29" fill="#415b77"/>
+<rect x="40" y="222" width="280" height="5" fill="#829db9"/>
+<rect x="440" y="222" width="240" height="29" fill="#415b77"/>
+<rect x="440" y="222" width="240" height="5" fill="#829db9"/>
+<rect x="800" y="222" width="120" height="29" fill="#415b77"/>
+<rect x="800" y="222" width="120" height="5" fill="#829db9"/>
+<rect x="320" y="218" width="120" height="9" rx="2" fill="#a56ce2" stroke="#6a39b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="380" y="202" fill="#633d94" text-anchor="middle" font-size="14" font-weight="700" font-family="Arial">B1 · SHADOW</text>
+<rect x="680" y="218" width="120" height="9" rx="2" fill="#a56ce2" stroke="#6a39b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="740" y="202" fill="#633d94" text-anchor="middle" font-size="14" font-weight="700" font-family="Arial">B2 · SHADOW</text>
+<line x1="170" y1="209" x2="255" y2="170" stroke="#ffdb83" stroke-width="8" stroke-opacity=".4"/>
+<line x1="170" y1="209" x2="255" y2="170" stroke="#dfa635" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="170" cy="207" r="13" fill="#ffc95e" stroke="#9a741e" stroke-width="2"/>
+<text x="170" y="185" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#8c661a">L1</text>
+<line x1="530" y1="209" x2="615" y2="170" stroke="#ffdb83" stroke-width="8" stroke-opacity=".4"/>
+<line x1="530" y1="209" x2="615" y2="170" stroke="#dfa635" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="530" cy="207" r="13" fill="#ffc95e" stroke="#9a741e" stroke-width="2"/>
+<text x="530" y="185" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#8c661a">L2</text>
+<rect x="256" y="190" width="28" height="32" rx="5" fill="#7d879d"/>
+<text x="270" y="184" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#4a556c">O1</text>
+<rect x="611" y="190" width="28" height="32" rx="5" fill="#7d879d"/>
+<text x="625" y="184" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#4a556c">O2</text>
+<path d="M 555 170 l 12 16 -12 19 -12 -19 Z" fill="#1eb6b4" stroke="#137e7d" stroke-width="2"/>
+<text x="555" y="160" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#137e7d">C1</text>
+<circle cx="85" cy="195" r="10" fill="#1575b9"/><rect x="76" y="205" width="18" height="17" rx="4" fill="#1575b9"/>
+<text x="85" y="178" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#145b93">START</text>
+<rect x="853" y="156" width="34" height="66" rx="5" fill="#d9fcf1" stroke="#168a74" stroke-width="4"/>
+<text x="870" y="145" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0a785d">EXIT</text>
+<line x1="85" y1="45" x2="870" y2="45" stroke="#246ab5" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="870,45 859,40 859,50" fill="#246ab5"/>
+<text x="477" y="37" text-anchor="middle" font-family="Arial" font-size="11" fill="#246ab5" font-weight="700">PLAYER PATH (SCHEMATIC)</text>
+<text x="480" y="300" font-size="12" text-anchor="middle" font-family="Arial" fill="#64748b">Conceptual side-view · not to scale · paths indicate intended roles, not exact movement frames</text>
+</svg><figcaption>תרשים סכמטי – רמה 3 במשחק Shadow Switch (לא בקנה מידה)</figcaption></figure></section>
+<section class="level"><h3>רמה 4: מעבדת הצל הכפול <span class="badge">קשה</span></h3>
+<p><strong>זמן משחק משוער:</strong> 6–9 דקות</p>
+<p><strong>מטרה:</strong> לשלב שני פנסים, שני גשרי צל, ניהול אנרגיה ומתג לפתיחת דלת היציאה.</p><p><strong>מבנה המפה:</strong> חדר מחולק לשלושה אזורים. L1 יוצר B1 מעל הבור הראשון; במרכז יש גביש C1 ומתג S1; L2 יוצר B2 מעל הבור השני; שער G1 נמצא לפני היציאה.</p><p><strong>רכיבים:</strong> שני פנסים L1/L2, שני עצמים O1/O2, שני בורות וגשרים B1/B2, שני גבישי אנרגיה (C1/C2), מתג אינטראקציה S1, שער G1 ודלת יציאה.</p><p><strong>פתרון אפשרי:</strong></p><ol>
+<li>מתחילים עם אנרגיה מוגבלת; מכוונים ומפעילים את L1 רק כאשר מוכנים לחצות את B1.</li>
+<li>מגיעים לאזור המרכזי, אוספים את C1 ומפעילים את S1 ב־E כדי לשחרר את הנעילה של G1.</li>
+<li>מכבים את L1; מכוונים את L2 לעבר O2, יוצרים את B2 וחוצים את הבור השני.</li>
+<li>אוספים את C2 במידת הצורך, עוברים בשער שכבר נפתח ומגיעים ליציאה.</li>
+</ol>
+<p><strong>מכשולים:</strong> ניהול שני מקורות אור, סדר פעולות נכון, שתי חציות ותנאי נוסף של שער נעול. אנרגיה יכולה להיגמר אם מפעילים את שני הפנסים ללא צורך.</p>
+<p><strong>העלאת קושי:</strong> השלב משלב את כלל המכניקות שנלמדו: אור, צל, שינוי כיוון, אנרגיה, גבישים, מתגים ויציאה.</p>
+<p><strong>ניצחון/כישלון:</strong> ניצחון: שני הבורות נחצו והמתג שחרר את G1. כישלון: נפילה, אנרגיה שאזלה לפני חצייה או אי־פתיחת השער.</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Level 4 schematic for Shadow Switch">
+<rect width="960" height="320" fill="#f4f8fc"/>
+<rect x="18" y="16" width="924" height="290" fill="#eaf1fa" stroke="#bdcadd" rx="10"/>
+<rect x="25" y="196" width="910" height="82" fill="#dbe7f3"/>
+<rect x="340" y="222" width="145" height="57" fill="#18212e"/>
+<text x="412" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="690" y="222" width="130" height="57" fill="#18212e"/>
+<text x="755" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="40" y="222" width="300" height="29" fill="#415b77"/>
+<rect x="40" y="222" width="300" height="5" fill="#829db9"/>
+<rect x="485" y="222" width="205" height="29" fill="#415b77"/>
+<rect x="485" y="222" width="205" height="5" fill="#829db9"/>
+<rect x="820" y="222" width="100" height="29" fill="#415b77"/>
+<rect x="820" y="222" width="100" height="5" fill="#829db9"/>
+<rect x="340" y="218" width="145" height="9" rx="2" fill="#a56ce2" stroke="#6a39b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="412" y="202" fill="#633d94" text-anchor="middle" font-size="14" font-weight="700" font-family="Arial">B1 · SHADOW</text>
+<rect x="690" y="218" width="130" height="9" rx="2" fill="#a56ce2" stroke="#6a39b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="755" y="202" fill="#633d94" text-anchor="middle" font-size="14" font-weight="700" font-family="Arial">B2 · SHADOW</text>
+<line x1="185" y1="209" x2="270" y2="170" stroke="#ffdb83" stroke-width="8" stroke-opacity=".4"/>
+<line x1="185" y1="209" x2="270" y2="170" stroke="#dfa635" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="185" cy="207" r="13" fill="#ffc95e" stroke="#9a741e" stroke-width="2"/>
+<text x="185" y="185" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#8c661a">L1</text>
+<line x1="565" y1="209" x2="650" y2="170" stroke="#ffdb83" stroke-width="8" stroke-opacity=".4"/>
+<line x1="565" y1="209" x2="650" y2="170" stroke="#dfa635" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="565" cy="207" r="13" fill="#ffc95e" stroke="#9a741e" stroke-width="2"/>
+<text x="565" y="185" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#8c661a">L2</text>
+<rect x="256" y="190" width="28" height="32" rx="5" fill="#7d879d"/>
+<text x="270" y="184" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#4a556c">O1</text>
+<rect x="641" y="190" width="28" height="32" rx="5" fill="#7d879d"/>
+<text x="655" y="184" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#4a556c">O2</text>
+<rect x="585" y="216" width="40" height="6" rx="2" fill="#40c08a"/>
+<text x="605" y="202" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0c8460">S1</text>
+<rect x="848" y="141" width="14" height="81" rx="3" fill="#e28b54" stroke="#985532" stroke-width="2"/>
+<text x="855" y="130" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#9b502d">G1</text>
+<path d="M 535 170 l 12 16 -12 19 -12 -19 Z" fill="#1eb6b4" stroke="#137e7d" stroke-width="2"/>
+<text x="535" y="160" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#137e7d">C1</text>
+<path d="M 835 170 l 12 16 -12 19 -12 -19 Z" fill="#1eb6b4" stroke="#137e7d" stroke-width="2"/>
+<text x="835" y="160" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#137e7d">C2</text>
+<circle cx="85" cy="195" r="10" fill="#1575b9"/><rect x="76" y="205" width="18" height="17" rx="4" fill="#1575b9"/>
+<text x="85" y="178" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#145b93">START</text>
+<rect x="876" y="156" width="34" height="66" rx="5" fill="#d9fcf1" stroke="#168a74" stroke-width="4"/>
+<text x="893" y="145" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0a785d">EXIT</text>
+<line x1="85" y1="45" x2="893" y2="45" stroke="#246ab5" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="893,45 882,40 882,50" fill="#246ab5"/>
+<text x="489" y="37" text-anchor="middle" font-family="Arial" font-size="11" fill="#246ab5" font-weight="700">PLAYER PATH (SCHEMATIC)</text>
+<text x="480" y="300" font-size="12" text-anchor="middle" font-family="Arial" fill="#64748b">Conceptual side-view · not to scale · paths indicate intended roles, not exact movement frames</text>
+</svg><figcaption>תרשים סכמטי – רמה 4 במשחק Shadow Switch (לא בקנה מידה)</figcaption></figure></section>
+<section><h2>דגשים למימוש</h2><p><strong>Echo Shift:</strong> כדי שלא תתרחש התנגשות בלתי נמנעת בזמן הופעת הדים ושחקן באותה נקודת התחלה, ההצעה היא ליצור אזור Spawn בטוח או חסינות קצרה בכניסת מחזור; שאר חוק ההתנגשות נשמר.</p><p><strong>Shadow Switch:</strong> יש לכייל את מהירות צריכת האנרגיה ואורך הקפיצה רק לאחר בדיקות בתוך Unity.</p><h3>המלצה לחלק ב׳</h3><p>לממש את <strong>Shadow Switch – רמה 2</strong>: היא מאפשרת להדגים Prefab ו־Spawn של גבישים, Collision/Trigger, Scene Management, שמירת נתונים בין סצנות ופקדי מסך לנייד. יש לשלב דגם שנוצר בעזרת כלי בינה מלאכותית וייבדק במשחק.</p><p class="small">המסמך מיועד לתכנון. אין לראות בתרשימים הוכחה שרמות פותחו או נבדקו כבר.</p></section></main></body></html>

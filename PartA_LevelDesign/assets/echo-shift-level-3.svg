@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Level 3 schematic for Echo Shift">
+<rect width="960" height="320" fill="#f4f8fc"/>
+<rect x="18" y="16" width="924" height="290" fill="#eaf1fa" stroke="#bdcadd" rx="10"/>
+<rect x="25" y="196" width="910" height="82" fill="#dbe7f3"/>
+<rect x="370" y="222" width="75" height="57" fill="#18212e"/>
+<text x="407" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="700" y="222" width="60" height="57" fill="#18212e"/>
+<text x="730" y="266" fill="#fff" text-anchor="middle" font-size="13" font-family="Arial">PIT</text>
+<rect x="40" y="222" width="330" height="29" fill="#415b77"/>
+<rect x="40" y="222" width="330" height="5" fill="#829db9"/>
+<rect x="445" y="222" width="255" height="29" fill="#415b77"/>
+<rect x="445" y="222" width="255" height="5" fill="#829db9"/>
+<rect x="760" y="222" width="160" height="29" fill="#415b77"/>
+<rect x="760" y="222" width="160" height="5" fill="#829db9"/>
+<rect x="170" y="216" width="40" height="6" rx="2" fill="#40c08a"/>
+<text x="190" y="202" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0c8460">S1</text>
+<rect x="515" y="216" width="40" height="6" rx="2" fill="#40c08a"/>
+<text x="535" y="202" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0c8460">S2</text>
+<rect x="348" y="141" width="14" height="81" rx="3" fill="#e28b54" stroke="#985532" stroke-width="2"/>
+<text x="355" y="130" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#9b502d">G1</text>
+<rect x="729" y="145" width="4" height="77" fill="#fa5465"/>
+<circle cx="731" cy="146" r="7" fill="#fa5465"/>
+<text x="731" y="132" font-size="12" text-anchor="middle" font-weight="700" font-family="Arial" fill="#b3273b">LASER</text>
+<circle cx="85" cy="195" r="10" fill="#1575b9"/><rect x="76" y="205" width="18" height="17" rx="4" fill="#1575b9"/>
+<text x="85" y="178" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#145b93">START</text>
+<rect x="853" y="156" width="34" height="66" rx="5" fill="#d9fcf1" stroke="#168a74" stroke-width="4"/>
+<text x="870" y="145" font-size="14" text-anchor="middle" font-weight="700" font-family="Arial" fill="#0a785d">EXIT</text>
+<line x1="85" y1="67" x2="190" y2="67" stroke="#17a4ce" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="190,67 179,62 179,72" fill="#17a4ce"/>
+<text x="137" y="59" text-anchor="middle" font-family="Arial" font-size="11" fill="#17a4ce" font-weight="700">ECHO 1 PATH (SCHEMATIC)</text>
+<line x1="85" y1="88" x2="535" y2="88" stroke="#37bd95" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="535,88 524,83 524,93" fill="#37bd95"/>
+<text x="310" y="80" text-anchor="middle" font-family="Arial" font-size="11" fill="#37bd95" font-weight="700">ECHO 2 PATH (SCHEMATIC)</text>
+<line x1="85" y1="45" x2="870" y2="45" stroke="#246ab5" stroke-width="3" stroke-dasharray="7 5"/>
+<polygon points="870,45 859,40 859,50" fill="#246ab5"/>
+<text x="477" y="37" text-anchor="middle" font-family="Arial" font-size="11" fill="#246ab5" font-weight="700">PLAYER PATH (SCHEMATIC)</text>
+<text x="480" y="300" font-size="12" text-anchor="middle" font-family="Arial" fill="#64748b">Conceptual side-view · not to scale · paths indicate intended roles, not exact movement frames</text>
+</svg>
