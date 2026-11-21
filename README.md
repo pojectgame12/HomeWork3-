@@ -1,17 +1,59 @@
-# מטלה 3 – פיתוח משחקים ב־Unity
+# Homework 3 – Game Development
 
-## מה יש בחבילה?
+## Part A – Level Design
 
-**חלק א׳ – תכנון רמות**: `PartA_LevelDesign/README.md` כולל ארבע רמות לכל אחד משני המשחקים **Echo Shift** ו־**Shadow Switch**, בצירוף שמונה תרשימי SVG. `preview.html` מציג את הכול בצורה נוחה לקריאה ולהדפסה.
+Level design for two original games:
 
-**חלק ב׳ – פרויקט Unity**: `PartB_ShadowSwitch_Unity/` הוא פרויקט Unity 2D לרמה 2 – *האור שאוזל*, עם קובצי C#, תמונות משחק ו־Editor Wizard שמייצר Prefabs וארבע סצנות אוטומטית.
+- **Echo Shift** – A puzzle-platformer based on recording and replaying the player's actions.
+- **Shadow Switch** – A puzzle-platformer in which light creates solid shadow bridges.
 
-**מדריך בעברית**: `GUIDE_HE.md` מסביר איך לפתוח, לבנות ולבדוק, עם צעדי הגשה.
+Each game includes four difficulty levels: Tutorial, Easy, Medium and Hard.
 
-**בדיקות**: `TEST_PLAN.md` מכיל את רשימת הבדיקות והראיות הנדרשות.
+All descriptions and diagrams are available in `PartA_LevelDesign`.
 
-### חשוב לפני ההגשה
+## Part B – Unity Implementation
 
-בתיקייה יש **קובצי מקור** וקוד מחולל סצנות. את קובצי הסצנות וה־Prefabs יש ליצור בתוך Unity באמצעות `Homework 3 → Generate Complete Game (Scenes + Prefabs)`. קובצי WebGL, APK, כתובת itch.io וצילום משחק בטלפון **אינם כלולים**: נדרשת בנייה, העלאה ובדיקה בפועל על המחשב ובמכשיר שלכם. לא נטען שהמשחק נבדק או נבנה בפועל בסביבת Unity.
+**Selected game:** Shadow Switch
 
-פירוט נוסף ב־`GUIDE_HE.md`.
+**Implemented level:** Level 2 – Fading Light
+
+**Unity version:** 6000.3.25f1
+
+### Implemented Features
+- Prefabs and automatic spawning
+- 2D collision detection
+- Scene transitions: MainMenu, Level02, Victory and GameOver
+- Persistent game data between scenes
+- Keyboard and touch controls
+- WebGL browser support
+
+### Play Online
+
+[Play Shadow Switch on itch.io](PASTE_YOUR_ITCH_IO_LINK_HERE)
+
+### Run the Unity Project
+
+1. Open Unity Hub.
+2. Add the `PartB_ShadowSwitch_Unity` folder as a project.
+3. Open it using Unity 6000.3.25f1.
+4. Open the `MainMenu` scene.
+5. Press Play.
+
+### Controls
+
+| Key | Action |
+|---|---|
+| A / D | Move |
+| Space | Jump |
+| E | Toggle light |
+| J / L | Rotate lamp |
+| R | Retry |
+
+### Repository Structure
+
+- `PartA_LevelDesign` – Level descriptions and diagrams
+- `PartB_ShadowSwitch_Unity` – Unity source project
+- `GUIDE_HE.md` – Setup and usage guide
+- `CODE_EXPLANATION_HE.md` – Code explanation
+- `TEST_PLAN.md` – Testing documentation
+- `ASSET_ATTRIBUTION.md` – Asset information
