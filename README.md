@@ -29,7 +29,7 @@ All descriptions and diagrams are available in `PartA_LevelDesign`.
 
 ### Play Online
 
-[Play Shadow Switch on itch.io]((https://projectgame12.itch.io/shadow-switch))
+[Play Shadow Switch on itch.io](https://projectgame12.itch.io/shadow-switch)
 
 ### Run the Unity Project
 
